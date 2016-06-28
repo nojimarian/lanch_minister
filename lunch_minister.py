@@ -1,15 +1,15 @@
-"""lanch_ministerの実行クラス"""
+"""ランチ大臣の実行クラス"""
 
 from slack import Slack
 
-class LanchMinister:
+class LunchMinister:
     """"""
 
     def __init__(self):
         """なにかやることあるかな"""
         pass
 
-    def lanch_time_now(self):
+    def lunch_time_now(self):
         """実行関数だよ"""
 
         message = 'みなさん、ランチの時間ですよ'
@@ -19,5 +19,5 @@ class LanchMinister:
         return 0
 
 if __name__ == '__main__':
-    lm_ = LanchMinister()
-    lm_.lanch_time_now()
+    lm_ = LunchMinister()
+    lm_.lunch_time_now()
