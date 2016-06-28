@@ -1,0 +1,6 @@
+[Slack]
+# incoming webHooksの設定
+# ''で囲まずそのまま書いてok
+Username = ランチ大臣
+IconUrl =
+ChannelUrl =
