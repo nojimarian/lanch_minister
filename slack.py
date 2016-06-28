@@ -4,22 +4,21 @@ import configparser
 import json
 import requests
 
-class Slack:
+from common import Common
+
+class Slack(Common):
     """チャンネルの設定はapp.iniに書いてね"""
 
-    CONFIG_FILE = 'app.ini'
     HEADERS = {'content-type': 'application/json'}
 
     def __init__(self):
-        """設定ファイルをパースしてself.configに格納"""
+        """設定ファイルのslackの部分をself.configへセット"""
 
-        cp_ = configparser.ConfigParser()
-        cp_.read(self.CONFIG_FILE)
-        self.config = cp_['Slack']
+        super().__init__()
+        self.config = self.configs['Slack']
 
     def send(self, message):
-        """self.configをもとにmessageをチャンネルに投稿する
-        """
+        """self.configをもとにmessageをチャンネルに投稿する"""
 
         headers = {'content-type': 'application/json'}
         data = {
